@@ -1,29 +1,21 @@
-# Day 2 – DrGViswanathan Challenge
+class Solution {
+    public List<String> fizzBuzz(int n) {
 
-## Focus
-- Conditional Statements
-- Logic Building
-- Iterative Thinking
-- Easy Level Problems
+        List<String> result = new ArrayList<>();
 
-## Problem Solved
-**FizzBuzz (LeetCode)**
+        for (int i = 1; i <= n; i++) {
 
-## Description
-The FizzBuzz problem requires generating output for numbers from 1 to *n* based on divisibility rules:
-- Print **"FizzBuzz"** if a number is divisible by both 3 and 5
-- Print **"Fizz"** if divisible by 3
-- Print **"Buzz"** if divisible by 5
-- Otherwise, print the number itself
+            if (i % 3 == 0 && i % 5 == 0) {
+                result.add("FizzBuzz");
+            } else if (i % 3 == 0) {
+                result.add("Fizz");
+            } else if (i % 5 == 0) {
+                result.add("Buzz");
+            } else {
+                result.add(String.valueOf(i));
+            }
+        }
 
-## Approach
-- Iterated from 1 to *n* using a loop
-- Applied conditional checks in the correct order
-- Stored results in a list using Java’s `ArrayList`
-- Returned the final list as output
-
-## Language Used
-- Java
-
-## Status
-- Completed ✅
+        return result;
+    }
+}
